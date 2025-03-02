@@ -107,23 +107,62 @@ elif options == "Visualizations":
     else:
         st.error("Failed to fetch data for visualizations.")
 
-# Generate predictions
+# Generate predictions and recommendations
 elif options == "Predictions":
-    st.header("Step Count Predictions")
-    if st.button("Predict Next 7 Days"):
-        response = requests.get(f"{API_URL}/predict")
-        if response.status_code == 200:
-            predictions = response.json()["predictions"]
-            st.write("Predicted Step Counts for the Next 7 Days:")
-            for i, steps in enumerate(predictions, start=1):
-                st.write(f"Day {i}: {steps:.2f} steps")
+    st.header("Step Count Predictions and Recommendations")
 
-            # Plot the predictions
-            plt.figure(figsize=(10, 6))
-            plt.plot(range(1, 8), predictions, marker='o')
-            plt.title("Predicted Step Counts for the Next 7 Days")
-            plt.xlabel("Day")
-            plt.ylabel("Step Count")
-            st.pyplot(plt)
+    if st.button("Generate Predictions and Recommendations"):
+        # Fetch historical data
+        response = requests.get(f"{API_URL}/data")
+        if response.status_code == 200:
+            data = response.json()
+            df = pd.DataFrame(data)
+            df['date'] = pd.to_datetime(df['date'])  # Convert 'date' column to datetime
+
+            # Generate predictions
+            response = requests.get(f"{API_URL}/predict")
+            if response.status_code == 200:
+                predictions = response.json()["predictions"]
+                st.write("Predicted Step Counts for the Next 7 Days:")
+                for i, steps in enumerate(predictions, start=1):
+                    st.write(f"Day {i}: {steps:.2f} steps")
+
+                # Plot the predictions
+                plt.figure(figsize=(10, 6))
+                plt.plot(range(1, 8), predictions, marker='o')
+                plt.title("Predicted Step Counts for the Next 7 Days")
+                plt.xlabel("Day")
+                plt.ylabel("Step Count")
+                st.pyplot(plt)
+
+                # Generate recommendations
+                st.subheader("Recommendations")
+
+                # Check weekend activity
+                df['day_of_week'] = df['date'].dt.day_name()
+                weekend_activity = df[df['day_of_week'].isin(['Saturday', 'Sunday'])]['step_count'].mean()
+                if weekend_activity < 5000:
+                    st.write("📉 **You’ve been less active on weekends. Try to increase your activity on weekends!**")
+
+                # Compare current week to previous week
+                df['week'] = df['date'].dt.isocalendar().week
+                weekly_avg = df.groupby('week')['step_count'].mean()
+                if len(weekly_avg) > 1:
+                    current_week = weekly_avg.iloc[-1]
+                    previous_week = weekly_avg.iloc[-2]
+                    if current_week < previous_week:
+                        st.write("📉 **You’ve been less active this week compared to last week. Try to increase your activity!**")
+                    else:
+                        st.write("📈 **Great job! You’ve been more active this week compared to last week.**")
+
+                # Check overall activity
+                overall_avg = df['step_count'].mean()
+                if overall_avg < 5000:
+                    st.write("📉 **Your overall activity is low. Try to increase your daily step count!**")
+                else:
+                    st.write("📈 **Great job! Your overall activity is good. Keep it up!**")
+
+            else:
+                st.error("Failed to generate predictions.")
         else:
-            st.error("Failed to generate predictions.")
+            st.error("Failed to fetch data for recommendations.")
