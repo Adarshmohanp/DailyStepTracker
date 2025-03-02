@@ -17,7 +17,7 @@ def create_table():
     conn.execute('''
         CREATE TABLE IF NOT EXISTS steps (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            date TEXT UNIQUE NOT NULL,
+            date TEXT NOT NULL,  -- Removed UNIQUE constraint
             step_count INTEGER NOT NULL
         )
     ''')
