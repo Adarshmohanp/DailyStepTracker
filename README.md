@@ -64,7 +64,17 @@ The **Daily Step Tracker** is a web application that helps users track their dai
 
 ### LoginPage 
 https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/Login.png
-### UploadData Page
+### UploadData 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/viewdata.png
+### ViewData 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/viewdata.png
+### Visualization 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization1.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualizatio2.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization3.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization4.png
+### Prediction
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/prediction1.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/prediction2.png
 
-
-
+---
