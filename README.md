@@ -79,7 +79,8 @@ https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/predictio
 
 ---
 
-##DemoVideo
+## DemoVideo
+
 Link: https://drive.google.com/file/d/1iY5sd46RUWiP7WVsESC7MC7aWF0W51Fs/view?usp=sharing
 
 ---
