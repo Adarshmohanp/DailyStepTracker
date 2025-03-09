@@ -57,12 +57,30 @@ The **Daily Step Tracker** is a web application that helps users track their dai
 
 ---
 
-**Link to the site: https://daily-step-tracker-frontend-qteej6n4nuzpwbtkwfjzcv.streamlit.app/
+** Link to the site: https://daily-step-tracker-frontend-qteej6n4nuzpwbtkwfjzcv.streamlit.app/
 
 ---
 ## Screenshots
 
 ### LoginPage 
-https://github.com/Adarshmohanp/DailyStepTracker/blob/main/Login.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/Login.png
+### UploadData 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/viewdata.png
+### ViewData 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/viewdata.png
+### Visualization 
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization1.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualizatio2.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization3.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/visualization4.png
+### Prediction
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/prediction1.png
+https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/prediction2.png
 
+---
 
+## DemoVideo
+
+Link: https://drive.google.com/file/d/1iY5sd46RUWiP7WVsESC7MC7aWF0W51Fs/view?usp=sharing
+
+---
