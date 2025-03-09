@@ -63,7 +63,7 @@ The **Daily Step Tracker** is a web application that helps users track their dai
 ## Screenshots
 
 ### LoginPage 
-Login.png
+screenshots/Login.png
 ### UploadData 
 https://github.com/Adarshmohanp/DailyStepTracker/blob/main/screenshots/viewdata.png
 ### ViewData 
