@@ -15,7 +15,7 @@ def get_db_connection():
 def create_tables():
     conn = get_db_connection()
     try:
-        # Create users table
+        # Create users table 
         conn.execute('''
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
