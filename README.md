@@ -1,4 +1,4 @@
-# Daily Step Tracker
+# Daily Step Tracker :walking_man: 👣 📈
 
 
 The **Daily Step Tracker** is a web application that helps users track their daily step counts, visualize trends, and get AI-powered insights. It provides a simple and intuitive interface for uploading step count data, viewing historical trends, and generating predictions for future step counts.
