@@ -59,3 +59,9 @@ The **Daily Step Tracker** is a web application that helps users track their dai
 
 **Link to the site: https://daily-step-tracker-frontend-qteej6n4nuzpwbtkwfjzcv.streamlit.app/
 
+---
+##Screenshots
+
+###LoginPage 
+
+
