@@ -8,7 +8,7 @@ The **Daily Step Tracker** is a web application that helps users track their dai
 ## Features
 
 - **User Authentication**: Users can sign up and log in to access their personalized step count data.
-- **Data Upload**: Users can upload their daily step count data manually or via a CSV file.
+- **Data Upload**: Users can upload their daily step count data manually .
 - **Trend Analysis**: Visualize daily step trends using interactive line graphs.
 - **Active vs. Inactive Days**: Categorize days as active or inactive based on step count thresholds.
 - **Weekly/Monthly Averages**: View average step counts per week or month.
